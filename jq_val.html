@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq_val</title>
+    <script src="C:\Jhin_Project\javaScript\JQuery\jquery-3.5.1.min.js"></script>
+    <script>
+        //** document(문서)가 준비(로딩완료)되면 함수를 실행합니다. **//
+        $(document).ready(function () {
+            //** 'button' 이라는 요소가 click될시 함수를 실행합니다. **//
+            $('button').click(function () {
+                //** val 이라는 변수에 html문서에서 id가 'target'인 것의 값(value)을 얻어와 저장합니다. **//
+                var val = document.getElementById('target').value;
+                //** 만약(if) val 변수에 저장된값의 길이가 0일경우 (사용자가 아무것도 입력하지 않았을때) **//
+                if (val.length === 0) {
+                    //** alert으로 화면에 알림으로 '다시 입력하세요!' 라고 출력합니다. **//
+                    alert('다시 입력하세요!');
+                }
+                //** 만약 val변수에 저장된 값(사용자가 화면에 입력한값)의 길이가 1보다 클 경우(사용자가 뭔가 입력한경우)**//
+                else if (val.length > 1) {
+                    //** alert으로 화면에 html 문서요소중에 id가 target인 것의 입력요소 값을 읽어와 표시합니다.(사용자가 입력한것을 그대로 화면에 출력합니다) **//
+                    alert($('#target').val());
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <!-- "이름 :" 이라는 텍스트 옆에 input요소로 id가 'target'인 input 입력창을 하나 만듭니다. -->
+    이름 : <input type="text" id="target" value=""> <br>
+    <!-- id가 'text'이고 화면에 "val()"이라고 표시되는 버튼을 하나 만듭니다. -->
+    <button id="text">val()</button>
+</body>
+</html>

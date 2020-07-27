@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq_show</title>
+    <script src="C:\Jhin_Project\javaScript\JQuery\jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <button class="show">Show it</button> <br>
+    <img id="Destiny" src="C:\Jhin_Project\javaScript\JQuery\Destiny.jpg" alt="Destiny" width="1200px" height="700px" style="display: none;"/>
+    <script>
+        $(document).ready(function () {
+            $('.show').click(function () {
+                $('#Destiny').show('slow');
+            });
+        });
+    </script>
+    <button class="hide">Hide it</button>
+    <script>
+        $(document).ready(function () {
+            $('.hide').click(function () {
+                $('#Destiny').hide('slow');
+            });
+        });
+    </script>
+</body>
+</html>

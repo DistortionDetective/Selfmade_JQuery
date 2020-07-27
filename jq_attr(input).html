@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq_attr(input)</title>
+    <script src="C:\Jhin_Project\javaScript\JQuery\jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                //** id가 changer인 항목의 속성을 'placeholder' 로 항목의 값을 'Input Your Address!' 로 추가합니다.**//
+                $('#changer').attr('placeholder' , 'Input Your Address!');
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="text" id="changer">
+    <button>누르면 텍스트항목이 placeholder로 변합니다!</button>
+</body>
+</html>

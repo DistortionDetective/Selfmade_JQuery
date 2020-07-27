@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq_chaining</title>
+    <script src="C:\Jhin_Project\javaScript\JQuery\jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                $('#Destiny').show().fadeOut('slow').slideDown('slow');
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>메소드 체이싱 시작</button>
+    <img id="Destiny" src="C:\Jhin_Project\javaScript\JQuery\Destiny.jpg" alt="Destiny" width="1000" height="700" style="display:none"/>
+</body>
+</html>

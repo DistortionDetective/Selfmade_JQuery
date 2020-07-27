@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse_up</title>
+    <style>
+        div.out {
+            width : 200px;
+            height: 160px;
+            background-color: yellow;
+        }
+    </style>
+    <script src="C:\Jhin_Project\javaScript\JQuery\jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div class="out">
+        <p>마우스를 여기로 움직이세요! 마우스왼클릭이 div요소 안에서 떼어지면 카운트가 올라갑니다.</p>
+        <p>0</p>
+    </div>
+    <script>
+        var i = 0;
+        $('div.out').mouseup(function () {
+            $('p:first' , this).text('mouse up');
+            $('p:last' , this).text(++i);
+        });
+    </script>
+</body>
+</html>

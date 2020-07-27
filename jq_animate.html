@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq_animate</title>
+    <script src="C:\Jhin_Project\javaScript\JQuery\jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                $('#Destiny').animate({ 
+                    left : '100px' ,
+                    opacity : 0.5 ,
+                    width : '150px'
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <img id="Destiny" src="C:\Jhin_Project\javaScript\JQuery\Destiny.jpg" alt="Destiny" width="1000" height="700" style="position: relative;"/> <br>
+    <button>animate()</button>
+</body>
+</html>

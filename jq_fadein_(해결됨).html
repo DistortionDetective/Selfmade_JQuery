@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq_fadein</title>
+    <script src="C:\Jhin_Project\javaScript\JQuery\jquery-3.5.1.min.js"></script>
+    <script>
+        //** 에러 이유 : ㅄ같이 jq에는 #fadeOut이 눌리면 실행되는 함수 만들어놓고는 정작 실행하는 button id를 fadeOut() 이 지랄로 해놨음 **//
+        $(document).ready(function () {
+            $('#fadeIn').click(function () {
+                $('#Destiny').fadeIn('95000');
+            });
+            $('#fadeOut').click(function () {
+                $('#Destiny').fadeOut('95000');
+            });
+        });
+        $('#stop').click(function () {
+            $('#Destiny').stop();
+        });
+    </script>
+</head>
+<body>
+    <button id="stop" style="position: fixed;">stop</button>
+    
+    <button id="fadeIn" >fadeIn()</button><!-- 제발 id에 fadeOut이라 지정했을때는 id를 뭐라고 써놨는지 확인 한번씩만 더하자 제발...ㅅㅂ.. -->
+    <button id="fadeOut">fadeOut()</button>
+    
+    <img id="Destiny" src="C:\Jhin_Project\javaScript\JQuery\Destiny.jpg" alt="Destiny" width="1000" height="700" style="display: none; position: relative;" />
+    
+</body>
+</html>

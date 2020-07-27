@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq_size_check</title>
+    <script src="C:\Jhin_Project\javaScript\JQuery\jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                alert('넓이는' + $('#div').width() + '입니다!');
+                alert('높이는' + $('#div').height() + '입니다!');
+            });
+        });
+    </script>
+    <style>
+        #div {
+            height: 120px;
+            width: 250px;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <div id="div"></div>
+    <button>size_check</button>
+</body>
+</html>

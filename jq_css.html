@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq_css</title>
+    <script src="C:\Jhin_Project\javaScript\JQuery\jquery-3.5.1.min.js"></script>
+    <style>
+        div { width: 60px; height: 60px; }
+    </style>
+</head>
+<body>
+    <div id="div1" style="background-color: blue;"></div>
+    <script>
+        //** document(문서)가 준비되면 함수를 실행한다 **//
+        $(document).ready(function () {
+            //** id가 button1 인 것이 클릭되면 함수를 실행한다 **//
+            $('#button1').click(function () {
+                //** 변수 color 는 id가 div1인 항목의 css항목인 'background-color'를 저장한다. **//
+                var color = $('#div1').css('background-color');
+                //** id가 result 인 항목을 text로 표현한다. (text 내용은 'backgroued-color : + 위의 변수 color') **//
+                $('#result').text('background-color :' + color)
+            });
+            //** id가 button2 인 항목이 click 되면 함수를 실행한다. **//
+            $('#button2').click(function () {
+                //** id가 div1인 항목의 css지정한다. ('backgroud-color 를 'red'로 변경) **//
+                $('#div1').css('background-color' , 'red');
+            });
+        });
+    </script>
+    <button id="button1">css(element)</button>
+    <button id="button2">css(element,style)</button>
+    <p id="result">여기에 결과가 표시됨.</p>
+</body>
+</html>
